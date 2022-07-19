@@ -1,7 +1,5 @@
 package register;
 
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.regex.Pattern;
 
 /**
@@ -43,7 +41,6 @@ public class ArrayRegister implements Register {
      *
      * @return the maximum number of persons in this register.
      */
-    @Override
     public int getSize() {
         return persons.length;
     }
@@ -179,7 +176,6 @@ public class ArrayRegister implements Register {
 
     }
 
-    @Override
     public Person[] getPersons() {
         return persons;
     }

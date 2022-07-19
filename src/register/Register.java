@@ -3,8 +3,6 @@ package register;
 public interface Register {
     int getCount();
 
-    int getSize();
-
     Person getPerson(int index);
 
     void addPerson(Person person);
@@ -14,6 +12,4 @@ public interface Register {
     Person findPersonByPhoneNumber(String phoneNumber);
 
     void removePerson(Person person);
-
-    Person[] getPersons();
 }

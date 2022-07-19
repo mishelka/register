@@ -6,8 +6,8 @@ package register;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        ArrayRegister register = new ArrayRegister(20);
-
+//        Register register = new ArrayRegister(20);
+        Register register = new ListRegister();
         register.addPerson(new Person("Janko Hrasko", "0900123456"));
 
         ConsoleUI ui = new ConsoleUI(register);

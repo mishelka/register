@@ -28,9 +28,7 @@ public class ConsoleUI {
         PRINT, ADD, UPDATE, REMOVE, FIND, EXIT
     }
 
-    ;
-
-    public ConsoleUI(ArrayRegister register) {
+    public ConsoleUI(Register register) {
         this.register = register;
     }
 
@@ -137,7 +135,7 @@ public class ConsoleUI {
         System.out.println("Zadaj nove meno osoby");
         String input1 = readLine();
         if (Pattern.compile("[A-Za-z]+").matcher(input1).matches()) {
-            register.getPersons()[cislo - 1].setName(readLine());
+            register.getPerson(cislo - 1).setName(readLine());
             System.out.println("update mena prebehol");
         } else {
             System.out.println("!!!update mena neprebehol, vstup nie je meno");
@@ -148,7 +146,7 @@ public class ConsoleUI {
         System.out.println("Zadaj nove telefonne cislo osoby");
         String input2 = readLine();
         if (Person.isValidPhoneNumberStatic(input2)) {
-            register.getPersons()[cislo - 1].setPhoneNumber(input2);
+            register.getPerson(cislo - 1).setPhoneNumber(input2);
             System.out.println("update tel. cisla prebehol");
         } else {
             System.out.println("!!!update tel cisla neprebehol, vstup nie je cislo");
