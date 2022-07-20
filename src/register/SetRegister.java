@@ -5,8 +5,8 @@ import java.util.*;
 /**
  * register.Person register.
  */
-public class ListRegister implements Register {
-    private List<Person> persons = new ArrayList<>();
+public class SetRegister implements Register {
+    private SortedSet<Person> persons = new TreeSet<>();
 
     @Override
     public int getCount() {
@@ -15,7 +15,13 @@ public class ListRegister implements Register {
 
     @Override
     public Person getPerson(int index) {
-        return persons.get(index);
+        Iterator<Person> it = persons.iterator();
+        int i = 0;
+        while(it.hasNext()) {
+            if(i == index) return it.next();
+            i++;
+        }
+        return null;
     }
 
     @Override

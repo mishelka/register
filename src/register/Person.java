@@ -103,4 +103,12 @@ public class Person implements Comparable<Person> {
     public int compareTo(Person o) {
         return this.getName().compareToIgnoreCase(o.getName());
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if(!(obj instanceof Person)) return false;
+        Person p = (Person) obj;
+        return this.name.equals(p.getName())
+                && this.phoneNumber.equals(p.getPhoneNumber());
+    }
 }
